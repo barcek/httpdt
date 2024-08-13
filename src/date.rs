@@ -6,7 +6,7 @@ pub const D_AS_S: u64 = H_AS_S * D_AS_H;
 
 #[derive(PartialEq, Debug)]
 pub struct Date {
-  pub  d: u64,
+  pub  d: u8,
   pub wd: Weekday,
   pub  m: Month,
   pub  y: Year,
@@ -134,7 +134,7 @@ impl Default for Month {
 
 impl Month {
 
-  pub fn len(&self, is_leap_year: bool) -> u64 {
+  pub fn len(&self, is_leap_year: bool) -> u8 {
     match self {
       Self::Jan | Self::Mar | Self::May | Self::Jul |
                   Self::Aug | Self::Oct | Self::Dec => 31,

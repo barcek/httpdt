@@ -105,78 +105,148 @@ mod test {
   };
   const FEB_28_1970_23_59_59: Datetime = Datetime {
     date: date::test::FEB_28_1970_23_59_59,
-    time: Time { h: D_AS_H - 1, m: H_AS_M - 1, s: M_AS_S - 1, xs:                    M_31_AS_S                     + M_28_AS_S - D_AS_S },
+    time: Time {
+       h: (D_AS_H - 1) as u8,
+       m: (H_AS_M - 1) as u8,
+       s: (M_AS_S - 1) as u8,
+      xs: M_31_AS_S + M_28_AS_S - D_AS_S
+    },
     secs: M_31_AS_S + M_28_AS_S - 1
   };
   const MAR_01_1970_00_00_00: Datetime = Datetime {
     date: date::test::MAR_01_1970_00_00_00,
-    time: Time { h:          0, m:          0, s:          0, xs:                    M_31_AS_S                     + M_28_AS_S          },
+    time: Time {
+       h: 0,
+       m: 0,
+       s: 0,
+      xs: M_31_AS_S + M_28_AS_S
+    },
     secs: M_31_AS_S + M_28_AS_S
   };
   const APR_30_1970_23_59_59: Datetime = Datetime {
     date: date::test::APR_30_1970_23_59_59,
-    time: Time { h: D_AS_H - 1, m: H_AS_M - 1, s: M_AS_S - 1, xs:                    M_31_AS_S * 2 + M_30_AS_S     + M_28_AS_S - D_AS_S },
+    time: Time {
+       h: (D_AS_H - 1) as u8,
+       m: (H_AS_M - 1) as u8,
+       s: (M_AS_S - 1) as u8,
+      xs: M_31_AS_S * 2 + M_30_AS_S + M_28_AS_S - D_AS_S
+    },
     secs: M_31_AS_S * 2 + M_30_AS_S + M_28_AS_S - 1
   };
   const MAY_01_1970_00_00_00: Datetime = Datetime {
     date: date::test::MAY_01_1970_00_00_00,
-    time: Time { h:          0, m:          0, s:          0, xs:                    M_31_AS_S * 2 + M_30_AS_S     + M_28_AS_S          },
+    time: Time {
+       h: 0,
+       m: 0,
+       s: 0,
+      xs: M_31_AS_S * 2 + M_30_AS_S + M_28_AS_S
+    },
     secs: M_31_AS_S * 2 + M_30_AS_S + M_28_AS_S
   };
   const JUL_31_1970_23_59_59: Datetime = Datetime {
     date: date::test::JUL_31_1970_23_59_59,
-    time: Time { h: D_AS_H - 1, m: H_AS_M - 1, s: M_AS_S - 1, xs:                    M_31_AS_S * 4 + M_30_AS_S * 2 + M_28_AS_S - D_AS_S },
+    time: Time {
+       h: (D_AS_H - 1) as u8,
+       m: (H_AS_M - 1) as u8,
+       s: (M_AS_S - 1) as u8,
+      xs: M_31_AS_S * 4 + M_30_AS_S * 2 + M_28_AS_S - D_AS_S
+    },
     secs: M_31_AS_S * 4 + M_30_AS_S * 2 + M_28_AS_S - 1
   };
   const SEP_01_1970_00_00_00: Datetime = Datetime {
     date: date::test::SEP_01_1970_00_00_00,
-    time: Time { h:          0, m:          0, s:          0, xs:                    M_31_AS_S * 5 + M_30_AS_S * 2 + M_28_AS_S          },
+    time: Time {
+       h: 0,
+       m: 0,
+       s: 0,
+      xs: M_31_AS_S * 5 + M_30_AS_S * 2 + M_28_AS_S
+    },
     secs: M_31_AS_S * 5 + M_30_AS_S * 2 + M_28_AS_S
   };
   const DEC_31_1970_23_59_59: Datetime = Datetime {
     date: date::test::DEC_31_1970_23_59_59,
-    time: Time { h: D_AS_H - 1, m: H_AS_M - 1, s: M_AS_S - 1, xs: Y_365_AS_S                                                   - D_AS_S },
+    time: Time {
+       h: (D_AS_H - 1) as u8,
+       m: (H_AS_M - 1) as u8,
+       s: (M_AS_S - 1) as u8,
+      xs: Y_365_AS_S - D_AS_S
+    },
     secs: Y_365_AS_S - 1
   };
 
   // 1972
   const JAN_01_1972_00_00_00: Datetime = Datetime {
     date: date::test::JAN_01_1972_00_00_00,
-    time: Time { h:          0, m:          0, s:          0, xs: Y_365_AS_S *  2                                                       },
+    time: Time {
+       h: 0,
+       m: 0,
+       s: 0,
+      xs: Y_365_AS_S * 2
+    },
     secs: Y_365_AS_S * 2
   };
   const FEB_29_1972_23_59_59: Datetime = Datetime {
     date: date::test::FEB_29_1972_23_59_59,
-    time: Time { h: D_AS_H - 1, m: H_AS_M - 1, s: M_AS_S - 1, xs: Y_365_AS_S *  2 + M_31_AS_S                      + M_29_AS_S - D_AS_S },
+    time: Time {
+       h: (D_AS_H - 1) as u8,
+       m: (H_AS_M - 1) as u8,
+       s: (M_AS_S - 1) as u8,
+      xs: Y_365_AS_S * 2 + M_31_AS_S + M_29_AS_S - D_AS_S
+    },
     secs: Y_365_AS_S * 2 + M_31_AS_S + M_29_AS_S - 1
   };
   const MAR_01_1972_00_00_00: Datetime = Datetime {
     date: date::test::MAR_01_1972_00_00_00,
-    time: Time { h:          0, m:          0, s:          0, xs: Y_365_AS_S *  2 + M_31_AS_S                      + M_29_AS_S          },
+    time: Time {
+       h: 0,
+       m: 0,
+       s: 0,
+      xs: Y_365_AS_S * 2 + M_31_AS_S + M_29_AS_S
+    },
     secs: Y_365_AS_S * 2 + M_31_AS_S + M_29_AS_S
   };
   const DEC_31_1972_23_59_59: Datetime = Datetime {
     date: date::test::DEC_31_1972_23_59_59,
-    time: Time { h: D_AS_H - 1, m: H_AS_M - 1, s: M_AS_S - 1, xs: Y_365_AS_S *  2 + Y_366_AS_S                                 - D_AS_S },
+    time: Time {
+       h: (D_AS_H - 1) as u8,
+       m: (H_AS_M - 1) as u8,
+       s: (M_AS_S - 1) as u8,
+      xs: Y_365_AS_S * 2 + Y_366_AS_S - D_AS_S
+    },
     secs: Y_365_AS_S * 2 + Y_366_AS_S - 1
   };
 
   // 2000
   const JAN_01_2000_00_00_00: Datetime = Datetime {
     date: date::test::JAN_01_2000_00_00_00,
-    time: Time { h:          0, m:          0, s:          0, xs: Y_365_AS_S * 23 + Y_366_AS_S *  7                                     },
+    time: Time {
+       h: 0,
+       m: 0,
+       s: 0,
+      xs: Y_365_AS_S * 23 + Y_366_AS_S * 7
+    },
     secs: Y_365_AS_S * 23 + Y_366_AS_S * 7
   };
   const DEC_31_2000_23_59_59: Datetime = Datetime {
     date: date::test::DEC_31_2000_23_59_59,
-    time: Time { h: D_AS_H - 1, m: H_AS_M - 1, s: M_AS_S - 1, xs: Y_365_AS_S * 23 + Y_366_AS_S *  8                            - D_AS_S },
+    time: Time {
+       h: (D_AS_H - 1) as u8,
+       m: (H_AS_M - 1) as u8,
+       s: (M_AS_S - 1) as u8,
+      xs: Y_365_AS_S * 23 + Y_366_AS_S * 8 - D_AS_S
+    },
     secs: Y_365_AS_S * 23 + Y_366_AS_S * 8 - 1
   };
 
   // 2024
   const DEC_31_2024_23_59_59: Datetime = Datetime {
     date: date::test::DEC_31_2024_23_59_59,
-    time: Time { h: D_AS_H - 1, m: H_AS_M - 1, s: M_AS_S - 1, xs: Y_365_AS_S * 41 + Y_366_AS_S * 14                            - D_AS_S },
+    time: Time {
+       h: (D_AS_H - 1) as u8,
+       m: (H_AS_M - 1) as u8,
+       s: (M_AS_S - 1) as u8,
+      xs: Y_365_AS_S * 41 + Y_366_AS_S * 14 - D_AS_S
+    },
     secs: Y_365_AS_S * 41 + Y_366_AS_S * 14 - 1
   };
 
