@@ -6,9 +6,15 @@ Generates timestamps for use in the HTTP Date header, the only format required f
 
 Calculates with a focus on clarity from `SystemTime`, with no external dependencies, and provides for updates to previously generated datetimes for speed.
 
+Available via [crates.io](https://crates.io/crates/httpdt):
+
+```shell
+cargo add httpdt@0.1.0
+```
+
 ## Why?
 
-For simplicity and fuller comprehension when implementing a client or server. No need to audit a more extensive datetime crate to generate a single relatively straightforward output.
+For a smaller surface area and better understanding of the underlying logic when implementing a client or server. No need to audit a more extensive datetime crate to generate a single relatively straightforward output.
 
 ## How?
 
@@ -40,7 +46,7 @@ The `default` method provides a `Datetime` instance corresponding to the Unix ep
 
 ### Docs
 
-The documentation can be built and viewed in the browser with the following command:
+The documentation is available at [docs.rs](https://docs.rs/httpdt/latest). It can be built and viewed locally in the browser with the following command:
 
 ```shell
 cargo doc --open
